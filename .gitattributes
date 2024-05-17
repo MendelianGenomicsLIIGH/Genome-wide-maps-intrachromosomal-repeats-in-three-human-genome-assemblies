@@ -1,0 +1,2 @@
+BED_FILES/respaldo[[:space:]]beds/*.bed filter=lfs diff=lfs merge=lfs -text
+data/*.bed filter=lfs diff=lfs merge=lfs -text
