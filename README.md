@@ -53,7 +53,7 @@ This step refines the dataset and enhances the accuracy of downstream analyses.
 ### 4. **Generate BED Files**
 
 The final consolidated datasets are formatted into **BED files** for visualization in genome browsers such as UCSC.  
-- Use the script **`2bed.R`** to generate BED files directly from the consolidated outputs.
+- Use the script **`2Bed.R`** to generate BED files directly from the consolidated outputs.
 
 ---
 
