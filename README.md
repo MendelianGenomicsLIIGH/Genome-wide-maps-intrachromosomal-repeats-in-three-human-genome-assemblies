@@ -3,10 +3,6 @@
 Here, you will find the **code** necessary to reproduce the analyses and the **data** from our paper: [**Genome-wide maps of highly-similar intrachromosomal repeats that mediate ectopic recombination in three human genome assemblies**](https://www.biorxiv.org/content/10.1101/2024.01.29.577884v1).
 
 
-
-This repository contains the **code** and **data** necessary to reproduce the analyses and results presented in our paper:  
-[**Genome-wide maps of highly similar intrachromosomal repeats that mediate ectopic recombination in three human genome assemblies**](https://www.biorxiv.org/content/10.1101/2024.01.29.577884v1).
-
 We explored direct and inverted repeats in three human genome assemblies—**GRCh37**, **GRCh38**, and **T2T-CHM13**—to understand their role in mediating ectopic recombination and structural rearrangements. This repository is organized into two main sections: 
 
 1. **Code**: Scripts and pipelines for repeat detection and analysis.  
