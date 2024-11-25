@@ -1,0 +1,44 @@
+#!/bin/bash
+# Use current working directory
+#$ -cwd
+#
+# Join stdout and stderr
+#$ -j y
+#
+# Run job through bash shell
+#$ -S /bin/bash
+#
+#You can edit the script since this line
+#
+# Your job name
+#$ -N  repeats1
+#
+# Send an email after the job has finished
+#$ -m e
+#$ -M lgfernandezluna@gmail.com
+#
+#
+# If modules are needed, source modules environment (Do not delete the next line):
+. /etc/profile.d/modules.sh
+
+# Add any modules you might require:
+module load lastz/1.04.15
+
+# Write your commands in the next line
+
+lastz_32 ../chroms/chr2.fa[unmask] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=minus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000 --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_2_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr2inv.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr2dir.txt > chr2dir_filtered.txt
+
+lastz_32 ../chroms/chr3.fa[unmask] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=minus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000 --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_3_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr3inv.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr3dir.txt > chr3dir_filtered.txt
+
+lastz_32 ../chroms/chr4.fa[unmask] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=minus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000  --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_4_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr4inv.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr4dir.txt > chr4dir_filtered.txt
+
+
+lastz_32 ../chroms/chr1.fa[unmask] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=minus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000  --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_1_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr1inv.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr1dir.txt > chr1dir_filtered.txt
