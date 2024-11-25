@@ -1,0 +1,47 @@
+#!/bin/bash
+# Use current working directory
+#$ -cwd
+#
+# Join stdout and stderr
+#$ -j y
+#
+# Run job through bash shell
+#$ -S /bin/bash
+#
+#You can edit the script since this line
+#
+# Your job name
+#$ -N  repeats4
+#
+# Send an email after the job has finished
+#$ -m e
+#$ -M lgfernandezluna@gmail.com
+#
+#
+# If modules are needed, source modules environment (Do not delete the next line):
+. /etc/profile.d/modules.sh
+
+# Add any modules you might require:
+module load lastz/1.04.15
+
+# Write your commands in the next line
+
+lastz_32 ../chroms/xx15[unmask,softmask=sat_coordinates/chr16sat] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=plus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000 --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_16_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr16dir.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr16dir.txt > chr16dir_filtered.txt
+
+lastz_32 ../chroms/xx16[unmask,softmask=sat_coordinates/chr17sat] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=plus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000 --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_17_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr17dir.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr17dir.txt > chr17dir_filtered.txt
+
+lastz_32 ../chroms/xx17[unmask,softmask=sat_coordinates/chr18sat] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=plus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000 --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_18_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr18dir.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr18dir.txt > chr18dir_filtered.txt
+
+lastz_32 ../chroms/xx18[unmask,softmask=sat_coordinates/chr19sat] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=plus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000 --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_19_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr19dir.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr19dir.txt > chr19dir_filtered.txt
+
+lastz_32 ../chroms/xx19[unmask,softmask=sat_coordinates/chr20sat] --self --nomirror --step=10 --maxwordcount=1 --masking=100 --strand=plus --seed=match15 --twins=-10..15 --gfextend --ydrop=5000 --filter=identity:80 --filter=nmatch:160 --inner=5000 --allocate:traceback=1.99G --outputmasking=mask_20_file ‑‑format=general-:name1,start1,end1,strand1,length1,name2,start2+,end2+,strand2,length2,number,identity,score,blastid%,cgap > chr20dir.txt
+ 
+awk '{ if(($5 >= 200) && ($10 >= 200) && ($15>=80)) print $0 }' chr20dir.txt > chr20dir_filtered.txt
