@@ -1,12 +1,15 @@
 # Genome-wide maps of highly similar intrachromosomal repeats that mediate ectopic recombination in three human genome assemblies
 
-Here, you will find the **code** necessary to reproduce the analyses and the **data** from our paper: [**Genome-wide maps of highly-similar intrachromosomal repeats that mediate ectopic recombination in three human genome assemblies**](https://www.biorxiv.org/content/10.1101/2024.01.29.577884v1).
+Here, you will find the **code** necessary to reproduce the analyses and the **data** from our paper: [**Genome-wide maps of highly-similar intrachromosomal repeats that mediate ectopic recombination in three human genome assemblies**](https://www.cell.com/hgg-advances/fulltext/S2666-2477(24)00136-2).
 
 
 We explored direct and inverted repeats in three human genome assemblies—**GRCh37**, **GRCh38**, and **T2T-CHM13**—to understand their role in mediating ectopic recombination and structural rearrangements. This repository is organized into two main sections: 
 
 1. **Code**: Scripts and pipelines for repeat detection and analysis.  
-2. **Data**: Resulting datasets in BED file format, compatible with the UCSC Genome Browser.
+2. **Data**: The resulting datasets in BED file format are compatible with the UCSC Genome Browser.
+- *Encode_annotation:* This folder contains datasets of direct and inverted repeats that overlap with annotated regulatory elements from the UCSC Genome Browser.
+- *Repeat_annotation:* This folder includes datasets of direct and inverted repeats that overlap with annotated repeat elements from the UCSC Genome Browser.
+- *LastZ_repeats_dataset:* This folder contains datasets describing the features of direct and inverted repeats identified through alignments performed using LastZ after applying a consolidation step
 
 ---
 
@@ -65,9 +68,9 @@ The [**Data** section](https://github.com/MendelianGenomicsLIIGH/Genome-wide-map
 
 ## Citation
 
-If you use this repository or its components in your research, please cite our preprint:  
+If you use this repository or its components in your research, please cite our article:  
 > *Genome-wide maps of highly similar intrachromosomal repeats that mediate ectopic recombination in three human genome assemblies*  
-> [DOI: 10.1101/2024.01.29.577884v1](https://www.biorxiv.org/content/10.1101/2024.01.29.577884v1)
+> [DOI: 10.1016/j.xhgg.2024.100396](https://www.cell.com/hgg-advances/fulltext/S2666-2477(24)00136-2)
 
 
 This repository provides a comprehensive framework for detecting and analyzing repetitive sequences, contributing to a deeper understanding of genome dynamics and structural variation. For any questions or issues, feel free to open an issue or contact us via GitHub.
