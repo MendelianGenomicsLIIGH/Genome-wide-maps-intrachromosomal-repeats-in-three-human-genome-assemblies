@@ -7,9 +7,9 @@ We explored direct and inverted repeats in three human genome assemblies—**GRC
 
 1. **Code**: Scripts and pipelines for repeat detection and analysis.  
 2. **Data**: The resulting datasets in BED file format are compatible with the UCSC Genome Browser.
-     -Encode_annotation: This folder contains datasets of direct and inverted repeats that overlap with annotated regulatory elements from the UCSC Genome Browser.
-     -Repeat_annotation: This folder includes datasets of direct and inverted repeats that overlap with annotated repeat elements from the UCSC Genome Browser.
-     -LastZ_repeats_dataset: This folder contains datasets describing the features of direct and inverted repeats identified through alignments performed using LastZ after applying a consolidation step
+- Encode_annotation: This folder contains datasets of direct and inverted repeats that overlap with annotated regulatory elements from the UCSC Genome Browser.
+- Repeat_annotation: This folder includes datasets of direct and inverted repeats that overlap with annotated repeat elements from the UCSC Genome Browser.
+- LastZ_repeats_dataset: This folder contains datasets describing the features of direct and inverted repeats identified through alignments performed using LastZ after applying a consolidation step
 
 ---
 
